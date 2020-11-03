@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #332338;
+  color: azure;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+}
+
+.movie-container {
+  margin: 20px 0;
+}
+.movie-container select {
+  background-color: azure;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 15px;
+  padding: 5px 15px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.container {
+  margin-bottom: 1.2rem;
+  min-height: 300px;
+  background-color: transparent;
+  min-width: 300px;
+  perspective: 1000px;
+}
+.container .container-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.container .container-inner.loaded {
+  transform: rotateY(180deg);
+}
+.container .container-inner .container-front,
+.container .container-inner .container-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+.container .container-inner .container-front {
+  background: url("/assets/ATXanS9.gif");
+  background-size: 700px;
+  background-position: center;
+  border-radius: 30%;
+}
+.container .container-inner .container-back {
+  transform: rotateY(180deg);
+}
+.container .screen {
+  background-color: white;
+  height: 100px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px white;
+}
+.container .buttons {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-around;
+}
+.container .buttons * {
+  cursor: pointer;
+  width: 4rem;
+  height: 1.2rem;
+  border-radius: 15px;
+}
+.container .row {
+  display: flex;
+  justify-content: center;
+}
+.container .row > .gap {
+  width: 10px;
+}
+.container .row > .seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.seat {
+  background-color: grey;
+  height: 15px;
+  width: 18px;
+  margin: 4px;
+  border-radius: 5px 5px 0 0;
+}
+.seat.selected {
+  background-color: #6bc5e4;
+}
+.seat.occupied {
+  background-color: lightcoral;
+}
+
+.showcase {
+  background-color: rgba(119, 136, 153, 0.233);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+  padding: 10px;
+  list-style: none;
+}
+.showcase > li {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.showcase > li > small {
+  margin-left: 3px;
+}
+
+p.text {
+  margin: 5px 0;
+}
+p.text > span {
+  color: #6bc5e4;
+}
+
+/*# sourceMappingURL=style.css.map */

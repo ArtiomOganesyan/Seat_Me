@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Me</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="movie-container">
+        <label>Pick a movie</label>
+        <select id="movie">
+            <option id="1" value="10">Brilliant Arm - 10</option>
+            <option id="2" value="13">Shurick's Adventure - 13</option>
+            <option id="3" value="18">Beware of the Automobile - 18</option>
+            <option id="4" value="7.25">Smokovnica from Greece - 7.25</option>
+        </select>
+    </div>
+
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+            <small>N/A</small>
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small>Selected</small>
+        </li>
+        <li>
+            <div class="seat occupied"></div>
+            <small>Occupied</small>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="container-inner">
+
+            <div class="container-front">
+            </div>
+
+            <div class="container-back">
+                <div class="screen"></div>
+                <div class="container-seats"></div>
+                <div class="buttons">
+                    <button id="reset">Reset</button>
+                    <button id="submit">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <p class="text">You have selected <span id="count">0</span> seats. The total price is <span id="total">0</span> RUB.
+    </p>
+
+    <script type="module" src="./script.js"> </script>
+</body>
+
+</html>

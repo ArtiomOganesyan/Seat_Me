@@ -1,0 +1,15 @@
+{
+  "name": "seat_me",
+  "version": "1.0.0",
+  "description": "MovieTheater seat picker",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artiom Oganesyan",
+  "license": "MIT",
+  "dependencies": {
+    "scss": "^0.2.4"
+  }
+}
