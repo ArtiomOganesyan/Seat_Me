@@ -15,8 +15,6 @@ const loadSeats = () => {
   setTimeout(() => {
     containerInner.classList.add('loaded');
 
-    console.log(occupiedSeats);
-
     initialConfig.seats.forEach((row) => {
       const childRow = document.createElement('div');
       childRow.classList.add('row');
@@ -46,10 +44,8 @@ const loadSeats = () => {
 loadSeats();
 
 const container = document.querySelector('.container');
-const seats = document.querySelectorAll('.row .seat:not(.occupied)');
 const count = document.getElementById('count');
 const total = document.getElementById('total');
-console.log(movieSelect);
 let ticketPrice = +movieSelect.value;
 
 const updateSelectedCount = () => {
@@ -76,7 +72,6 @@ container.addEventListener('click', (event) => {
     !event.target.classList.contains('occupied')
   ) {
     event.target.classList.toggle('selected');
-    console.log(event.target.id);
     updateSelectedCount();
   }
 
